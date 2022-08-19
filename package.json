@@ -1,5 +1,5 @@
 {
-  "name": "hackathon-unac",
+  "name": "hackathon-unac-frontend",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -9,8 +9,12 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@popperjs/core": "^2.11.6",
+    "bootstrap": "^5.2.0",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-router": "5.2.0",
+    "react-router-dom": "6.3.0"
   },
   "devDependencies": {
     "@types/react": "^18.0.17",
