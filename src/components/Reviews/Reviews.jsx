@@ -1,13 +1,11 @@
 import React from "react";
 import styles from "./Reviews.module.css";
-import Header from "../Header/Header";
 import imgReviews from "../../assets/send_mail_icon_154536.png";
 import { Link } from "react-router-dom";
 
 const Reviews = () => {
   return (
     <div className={styles.Reviews}>
-      <Header />
       <div className={styles.wrapper_content_reviews}>
         <div className={styles.wrapper_img_reviews}>
           <img src={imgReviews} alt="" className={styles.img_reviews} />

@@ -1,9 +1,8 @@
-import React from "react";
 import styles from "./Header.module.css";
 import imgLogo from "./../../assets/Home/Logo.png";
 import { Link } from "react-router-dom";
 
-const Header = () => {
+export const Header = () => {
   return (
     <header className={styles.home_header}>
       <div className={styles.home_wrapper_logo}>
@@ -17,7 +16,7 @@ const Header = () => {
             </Link>
           </li>
           <li className={styles.home_item_link}>
-            <Link to="/procesos" className={styles.home_link}>
+            <Link to="/procesos-academicos" className={styles.home_link}>
               Procesos académicos
             </Link>
           </li>
@@ -33,9 +32,7 @@ const Header = () => {
           </li>
           <li className={styles.home_item_link}>
             <Link to="/login" className={styles.home_link_admin}>
-              <span className={styles.link_admin_span}>
-                Login admin
-              </span>
+              <span className={styles.link_admin_span}>Login admin</span>
             </Link>
           </li>
         </ul>
@@ -43,5 +40,3 @@ const Header = () => {
     </header>
   );
 };
-
-export default Header;

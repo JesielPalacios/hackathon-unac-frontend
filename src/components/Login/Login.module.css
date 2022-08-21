@@ -22,6 +22,7 @@
 }
 .wrapper_img{
     background-color: #eeeeee;
+    /* background-color: #9e1b1b0e; */
     display: flex;
     justify-content: center;
     align-items: center;

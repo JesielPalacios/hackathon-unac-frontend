@@ -1,8 +1,8 @@
 import React from "react";
 import styles from "./Home.module.css";
-import Header from "../Header/Header";
 import imgHero from "../../assets/Home/Group2099.png";
 import * as bootstrap from "bootstrap";
+import { Seo } from "../layout/Seo";
 
 const Home = () => {
   const processes = [
@@ -46,15 +46,13 @@ const Home = () => {
   console.log(processes);
   return (
     <div className={styles.Home}>
-      <Header />
+      <Seo title="Inicio" subtitle='Sistema Virtual de Peticiones para el departamento de admisiones de la UNAC'/>
 
       <section className={styles.Hero}>
         <div className={styles.hero_wrapper_content}>
           <div className={styles.hero_content}>
             <h1 className={styles.hero_h1}>{processes[0].title}</h1>
-            <h3 className={styles.hero_h2}>
-              Procesos académicos
-            </h3>
+            <h3 className={styles.hero_h2}>Procesos académicos</h3>
             <p className={styles.hero_paragraph}>{processes[0].description}</p>
           </div>
         </div>
