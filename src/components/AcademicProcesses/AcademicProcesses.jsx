@@ -66,10 +66,8 @@ const AcademicProcesses = () => {
         </li>
       </ol>
 
-      <AcademicProccess accordeon={accordeon} onClick={toggle}>
-        Formulario para solicitar cancelación de materias
-      </AcademicProccess>
-      <AcademicProccessInfo>
+      <AcademicProccess2>
+        <summary>Formulario para solicitar cancelación de materias</summary>
         <p>
           Artículo 42. TÉRMINO PARA CANCELAR LA MATRÍCULA O MATERIAS Y SUS
           CONSECUENCIAS. 1. Cancelación de matrícula a. Si la cancelación de
@@ -90,7 +88,7 @@ const AcademicProcesses = () => {
           efecto, no se registrarán notas, y el estudiante quedará como si no
           hubiese cursado el semestre.
         </p>
-      </AcademicProccessInfo>
+      </AcademicProccess2>
 
       {/* <Wrapper></Wrapper> */}
     </Container>
@@ -128,9 +126,9 @@ const Subtitle = styled.h2`
 `;
 
 const AcademicProccess = styled.button`
+  cursor: pointer;
   background-color: ${({ accordeon }) => (accordeon ? "#eee" : "#ccc")};
   color: #444;
-  cursor: pointer;
   padding: 18px;
   width: 100%;
   border: none;
@@ -156,7 +154,6 @@ const AcademicProccess = styled.button`
           float: right;
           margin-left: 5px;
         }`}
-
 `;
 
 const AcademicProccessInfo = styled.div`
@@ -168,4 +165,70 @@ const AcademicProccessInfo = styled.div`
   ${({ accordeon }) => (accordeon ? "max-height: 0;" : "")}
   overflow: hidden;
   transition: max-height 0.2s ease-out;
+`;
+
+const AcademicProccess2 = styled.details`
+  display: block;
+  width: 300px;
+  margin: 10px 0;
+
+  summary {
+    display: block;
+    background: #99b92c;
+    color: white;
+    border-radius: 5px;
+    padding: 5px;
+    cursor: pointer;
+    font-weight: bold;
+
+    ::-webkit-details-marker {
+      color: #ff0000;
+      background: #ffffff;
+    }
+
+    ::-webkit-details-marker {
+      display: none;
+    }
+  }
+
+  [open] {
+    summary {
+      ::-webkit-details-marker {
+        color: #0000ff;
+        background: #00ffff;
+      }
+
+      :after {
+        content: "-";
+        color: #ffffff;
+      }
+    }
+  }
+
+  :after {
+    content: "+";
+    color: #ffffff;
+    float: left;
+    font-size: 1.5em;
+    font-weight: bold;
+    margin: -5px 5px 0 0;
+    padding: 0;
+    text-align: center;
+    width: 20px;
+  }
+`;
+
+const AcademicProccessInfo2 = styled.summary`
+  display: block;
+  background: #99b92c;
+  color: white;
+  border-radius: 5px;
+  padding: 5px;
+  cursor: pointer;
+  font-weight: bold;
+
+  ::-webkit-details-marker {
+    color: #ff0000;
+    background: #ffffff;
+  }
 `;
