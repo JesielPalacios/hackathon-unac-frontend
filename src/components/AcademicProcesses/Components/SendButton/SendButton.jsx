@@ -22,7 +22,7 @@ const Button1 = styled.button`
     color: #ffffff;
   }
 `;
-export const Button = styled.button`
+export const Button = styled.input`
   border: none;
   height: 100%;
   height: 33px;

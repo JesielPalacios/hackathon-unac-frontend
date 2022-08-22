@@ -101,11 +101,12 @@ export const Container = styled.div`
   /* background: red; */
   height: 100%;
   height: 100vh;
-  
+  /* width: 90%; */
+
   details {
     margin-bottom: 15px;
     padding-bottom: 15px;
-    height: 100%;
+    /* height: 100%; */
     &[open] {
       summary {
         color: #ee6b4e;
@@ -209,10 +210,10 @@ export const Title = styled.h1`
   margin-bottom: 35px;
   font-weight: 600;
   line-height: 50px;
-  `;
+`;
 
 export const Subtitle = styled.h2`
-line-height: 30px;
+  line-height: 30px;
   font-weight: 500;
   font-size: 25px;
   font-family: "Poppins", sans-serif;
