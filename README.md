@@ -5,11 +5,26 @@ Bienvenid@, este es el proyecto frontend donde está que es un cliente web desar
 ## Información relevante
 Este es es un cliente web desarrollado en React y javascript, el cual  consume la API Rest Full de la Hakathon en la Corporación Universitaria Adventista - UNAC.
 
-Especicifaciones de las librerías:
-* Javascript:
-* React:
-* Redux:
+### Especicifaciones de las librerías:
+* Javascript: Como lenguaje de programación preferido para el desarrollo web.
+* React: Como librería potente para renderizar html en el navegador.
+* Redux: Como administrador del estado/información en la plataforma.
+* Jest: Como libraría para testing.
+* React testing Library: Como conjunto de librarías para testing en general.
 
+### Metodología de trabajo
+Se trabaja medianta el modelo de metodología Agil Scrum
+
+Roles:
+
+* Product Owner: Jesiel Palacios.
+
+* Scrum Master: Jesiel Palacios.
+
+* Equipo de desarrollo: Jesiel Palacios, Juan Cabana.
+
+### Arquitectura
+El mdelo de la arquitectura es mediante microservicios, mediante un patrón MVC (Modelo Vista Controlador), en donde la vista está hecha por React en un proyecto como servicio separado. Así mismo como la base de datos que también se encuentra en un dominio y servidor por separado.
 
 ## Descargar el repositorio
 A continuación los pasos para la instalación de las dependencias con `git`
@@ -35,7 +50,8 @@ git clone https://github.com/JesielPalacios/hackathon-unac-frontend -b <nombrede
 * Para descargar una rama específica del repositorio en una carpeta actual
 
 ```markdown
-git clone https://github.com/JesielPalacios/hackathon-unac-frontend -b <nombredeLaRama>
+git clone https://github.com/JesielPalacios/hackathon-unac-frontend -b <nombredeLaRama> .
+```
 
 
 ## Instalación de dependencias
