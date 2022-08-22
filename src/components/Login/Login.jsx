@@ -69,7 +69,7 @@ const Login = () => {
 
 export default Login;
 
-const LoginButton = styled.button`
+export const LoginButton = styled.button`
   border: none;
   height: 100%;
   margin: 0px;

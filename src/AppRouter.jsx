@@ -1,5 +1,6 @@
 import React, { Suspense, useContext } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { MatterCancellation } from "./components/AcademicProcesses/Components/MatterCancellation/MatterCancellation";
 import { Layout } from "./components/layout/Layout";
 
 const Home = React.lazy(() => import("./components/Home/Home"));
@@ -21,6 +22,7 @@ export const AppRouter = () => {
             <Route path="/revisiones" component={Reviews} />
             <Route path="/nosotros" component={About} />
             <Route path="/login" component={LogIn} />
+            <Route path="/cancelar-materia" component={MatterCancellation} />
             {/* <Route path="/dashboard">{isAuth ? <Dashboard2 /> : <LogIn />}</Route>
         <Route path="/usuarios">{isAuth ? <Dashboard2 /> : <LogIn />}</Route>
         <Route path="/entrevistas">{isAuth ? <Dashboard2 /> : <LogIn />}</Route>

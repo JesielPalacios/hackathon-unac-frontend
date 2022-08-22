@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-import { Seo } from "../layout/Seo";
+import { Seo } from "../../layout/Seo";
 
 const AcademicProcesses = () => {
   return (
@@ -93,14 +93,13 @@ const AcademicProcesses = () => {
 
 export default AcademicProcesses;
 
-export const Container = styled.div`
+const Container = styled.div`
   padding-top: 35px;
   padding-left: 80px;
   padding-right: 80px;
   /* border: 1px solid #000; */
   /* background: red; */
   height: 100%;
-  height: 100vh;
   
   details {
     margin-bottom: 15px;
@@ -198,7 +197,7 @@ const LinkRouter = styled(Link)`
   }
 `;
 
-export const Title = styled.h1`
+const Title = styled.h1`
   font-size: 45px;
   text-align: center;
   font-family: "Poppins", sans-serif;
@@ -209,10 +208,9 @@ export const Title = styled.h1`
   margin-bottom: 35px;
   font-weight: 600;
   line-height: 50px;
-  `;
+`;
 
-export const Subtitle = styled.h2`
-line-height: 30px;
+const Subtitle = styled.h2`
   font-weight: 500;
   font-size: 25px;
   font-family: "Poppins", sans-serif;
