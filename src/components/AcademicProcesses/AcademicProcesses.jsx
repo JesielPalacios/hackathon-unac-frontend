@@ -171,7 +171,7 @@ export const Container = styled.div`
   }
 `;
 
-const LinkRouter = styled(Link)`
+export const LinkRouter = styled(Link)`
   font-family: "Poppins", sans-serif;
   font-size: 13px;
   text-decoration: none;

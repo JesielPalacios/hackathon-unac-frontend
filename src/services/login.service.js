@@ -1,7 +1,5 @@
-
 export default function login({ email, password }) {
-  console.log(email, password)
-  return fetch(`${process.env.API_HOST}/${process.env.ENDPOINT}`, {
+  return fetch('http://localhost:3001/api/auth/login', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
@@ -13,8 +11,7 @@ export default function login({ email, password }) {
       return res.json()
     })
     .then((res) => {
-      const { token } = res
-      console.log(res)
-      return token
+      const { accessToken } = res
+      return accessToken
     })
 }
