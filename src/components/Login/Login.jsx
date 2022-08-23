@@ -5,20 +5,17 @@ import Swal from 'sweetalert2'
 import imgLogo from '../../assets/UNACLogo.png'
 import imgLogin from './../../assets/illustrationLogin.png'
 import { useUser } from '../../core/hooks/useUser'
-import { LinkRouter } from '../AcademicProcesses/AcademicProcesses'
 import styles from './Login.module.css'
 
 const Login = ({ onLogin }) => {
-  const history = useHistory()
   const [email, setEmail] = useState(null)
   const [password, setPassword] = useState(null)
   const [remember, setRemember] = useState(false)
 
-  const { login, isAuth, loading, error } = useUser()
+  const { login, loading, error } = useUser()
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    console.log('first')
 
     if (email === null && password === null) {
       Swal.fire({
@@ -58,11 +55,6 @@ const Login = ({ onLogin }) => {
       })
     }
   }
-
-  useEffect(() => {
-    if (isAuth) history.push('/')
-    onLogin && onLogin()
-  }, [isAuth, history, onLogin])
 
   return (
     <>
@@ -116,6 +108,19 @@ const Login = ({ onLogin }) => {
                   ¿Recuperar contraseña?
                 </a>
               </div>
+
+              {loading && (
+                <span className={styles.label_checkbox}>Cargando</span>
+              )}
+
+              {error && (
+                <span
+                  className={styles.label_checkbox}
+                  style={{ color: 'red' }}
+                >
+                  Error, intente nuevamente
+                </span>
+              )}
 
               <LoginButton type="submit">Iniciar sesión</LoginButton>
             </form>

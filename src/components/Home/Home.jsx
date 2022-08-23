@@ -43,7 +43,7 @@ const Home = () => {
     },
   ];
 
-  console.log(processes);
+  // console.log(processes);
   return (
     <div className={styles.Home}>
       <Seo title="Inicio" subtitle='Sistema Virtual de Peticiones para el departamento de admisiones de la UNAC'/>

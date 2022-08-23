@@ -1,4 +1,4 @@
-export default function login({ email, password }) {
+export default function loginService({ email, password }) {
   return fetch('http://localhost:3001/api/auth/login', {
     method: 'POST',
     headers: {
