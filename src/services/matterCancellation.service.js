@@ -8,6 +8,9 @@ export async function createMatterCancellationService({
   token,
 }) {
   const formData = new FormData()
+  formData.append('subjectToCancel', subjectToCancel)
+  formData.append('teacher', teacher)
+  formData.append('lastDateOfClassAttendance', lastDateOfClassAttendance)
   formData.append('file', studentSignature)
 
   // return fetch('http://localhost:3001/api/matter-cancellations', {
@@ -23,8 +26,8 @@ export async function createMatterCancellationService({
   // })
 
   return await axios
-    // .post('http://localhost:3001/api/matter-cancellations', formData, {
-    .post('http://localhost:3001/uploads', formData, {
+    .post('http://localhost:3001/api/matter-cancellations', formData, {
+      // .post('http://localhost:3001/uploads', formData, {
       headers: {
         Authorization: token,
         'Content-Type': 'multipart/form-data',

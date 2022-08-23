@@ -12,62 +12,66 @@ import { Button } from '../shared/SendButton/SendButton'
 
 export const MatterCancellation = () => {
   const { createMatterCancellation, loading, error } = useMatterCancellation()
-  // const [subjectToCancel, setSubjectToCancel] = useState('')
-  // const [teacher, setTeacher] = useState('')
-  // const [lastDateOfClassAttendance, setLastDateOfClassAttendance] = useState('')
-  // const [studentSignature, setStudentSignature] = useState('')
-  const [subjectToCancel, setSubjectToCancel] = useState(
-    'Matemáticas Financieras'
-  )
-  const [teacher, setTeacher] = useState('Luis Eduardo')
+  const [subjectToCancel, setSubjectToCancel] = useState(null)
+  const [teacher, setTeacher] = useState(null)
   const [lastDateOfClassAttendance, setLastDateOfClassAttendance] =
-    useState('2022-08-09')
-  const [studentSignature, setStudentSignature] = useState('')
+    useState(null)
+  const [studentSignature, setStudentSignature] = useState(null)
+
+  // const [subjectToCancel, setSubjectToCancel] = useState(
+  //   'Matemáticas Financieras'
+  // )
+  // const [teacher, setTeacher] = useState('Luis Eduardo')
+  // const [lastDateOfClassAttendance, setLastDateOfClassAttendance] =
+  //   useState('2022-08-09')
+  // const [studentSignature, setStudentSignature] = useState(null)
 
   const handleSubmit = (e) => {
     e.preventDefault()
 
-    // if (error) {
-    //   Swal.fire({
-    //     title: '<strong>Faltan datos</strong>',
-    //     icon: 'error',
-    //     html: 'Hay un error en los datos!',
-    //     showCloseButton: true,
-    //     showCancelButton: true,
-    //     focusConfirm: false,
-    //     confirmButtonText: 'Intentar de nuevo',
-    //     confirmButtonAriaLabel: 'Intentar de nuevo',
-    //     cancelButtonText: 'Cancelar',
-    //     cancelButtonAriaLabel: 'Cancelar',
-    //   })
-    // } else {
-
     if (
-      studentSignature.name.endsWith('.png') ||
-      studentSignature.name.endsWith('.jpg') ||
-      studentSignature.name.endsWith('.jpeg')
+      subjectToCancel != null &&
+      teacher != null &&
+      lastDateOfClassAttendance != null &&
+      studentSignature != null
     ) {
-      createMatterCancellation({
-        subjectToCancel,
-        teacher,
-        lastDateOfClassAttendance,
-        studentSignature,
-      })
+      if (
+        studentSignature.name.endsWith('.png') ||
+        studentSignature.name.endsWith('.jpg') ||
+        studentSignature.name.endsWith('.jpeg')
+      ) {
+        createMatterCancellation({
+          subjectToCancel,
+          teacher,
+          lastDateOfClassAttendance,
+          studentSignature,
+        })
+      } else {
+        Swal.fire({
+          title: '<strong>Error de archivo</strong>',
+          icon: 'error',
+          html: 'No se puede aceptar este tipo de archivo, elija una imágen del tipo indicado!',
+          showCloseButton: true,
+          showCancelButton: false,
+          focusConfirm: false,
+          confirmButtonText: 'Aceptar',
+          confirmButtonAriaLabel: 'Aceptar',
+        })
+      }
     } else {
       Swal.fire({
-        title: '<strong>Error de archivo</strong>',
+        title: '<strong>Faltan datos</strong>',
         icon: 'error',
-        html: 'No se puede aceptar este tipo de archivo, elija una imágen del tipo indicado!',
+        html: 'Verifique la infromación suministrada!',
         showCloseButton: true,
-        showCancelButton: false,
+        showCancelButton: true,
         focusConfirm: false,
-        confirmButtonText: 'Aceptar',
-        confirmButtonAriaLabel: 'Aceptar',
-        // cancelButtonText: 'Cancelar',
-        // cancelButtonAriaLabel: 'Cancelar',
+        confirmButtonText: 'Intentar de nuevo',
+        confirmButtonAriaLabel: 'Intentar de nuevo',
+        cancelButtonText: 'Cancelar',
+        cancelButtonAriaLabel: 'Cancelar',
       })
     }
-    // }
   }
 
   return (
