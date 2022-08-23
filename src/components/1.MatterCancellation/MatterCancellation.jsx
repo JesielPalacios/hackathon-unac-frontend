@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
+import Swal from 'sweetalert2'
 import { useMatterCancellation } from '../../core/hooks/useMatterCancellation'
 import {
   Container,
@@ -15,9 +16,12 @@ export const MatterCancellation = () => {
   // const [teacher, setTeacher] = useState('')
   // const [lastDateOfClassAttendance, setLastDateOfClassAttendance] = useState('')
   // const [studentSignature, setStudentSignature] = useState('')
-  const [subjectToCancel, setSubjectToCancel] = useState('Matemáticas Financieras')
+  const [subjectToCancel, setSubjectToCancel] = useState(
+    'Matemáticas Financieras'
+  )
   const [teacher, setTeacher] = useState('Luis Eduardo')
-  const [lastDateOfClassAttendance, setLastDateOfClassAttendance] = useState('2022-08-09')
+  const [lastDateOfClassAttendance, setLastDateOfClassAttendance] =
+    useState('2022-08-09')
   const [studentSignature, setStudentSignature] = useState('')
 
   const handleSubmit = (e) => {
@@ -37,12 +41,32 @@ export const MatterCancellation = () => {
     //     cancelButtonAriaLabel: 'Cancelar',
     //   })
     // } else {
+
+    if (
+      studentSignature.name.endsWith('.png') ||
+      studentSignature.name.endsWith('.jpg') ||
+      studentSignature.name.endsWith('.jpeg')
+    ) {
       createMatterCancellation({
         subjectToCancel,
         teacher,
         lastDateOfClassAttendance,
         studentSignature,
       })
+    } else {
+      Swal.fire({
+        title: '<strong>Error de archivo</strong>',
+        icon: 'error',
+        html: 'No se puede aceptar este tipo de archivo, elija una imágen del tipo indicado!',
+        showCloseButton: true,
+        showCancelButton: false,
+        focusConfirm: false,
+        confirmButtonText: 'Aceptar',
+        confirmButtonAriaLabel: 'Aceptar',
+        // cancelButtonText: 'Cancelar',
+        // cancelButtonAriaLabel: 'Cancelar',
+      })
+    }
     // }
   }
 
@@ -131,11 +155,8 @@ export const MatterCancellation = () => {
           <input
             type="file"
             id="subjectToCancel"
-            accept="image/png, image/jpeg"
-            onChange={(e) => {
-              // e.target.files[0] = new FormData()
-              StudentSignature(e.target.files[0])
-            }}
+            accept="image/png, image/jpg, image/jpeg"
+            onChange={(e) => setStudentSignature(e.target.files[0])}
             placeholder="Sólo imágenes png o jpg"
           />
         </div>

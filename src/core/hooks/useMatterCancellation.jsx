@@ -20,10 +20,12 @@ export const useMatterCancellation = () => {
         lastDateOfClassAttendance,
         studentSignature,
         token: isAuth,
-      }).catch((err) => {
-        setState({ loading: false, error: true })
-        console.error(err)
       })
+      
+      // .catch((err) => {
+      //   setState({ loading: false, error: true })
+      //   console.error(err)
+      // })
     },
     []
   )
