@@ -111,7 +111,7 @@ export const MatterCancellation = () => {
               hubiese cursado el semestre.
             </li>
             <li>
-              <b>Parágrafo 1</b> En los programas a distancia o en materias
+              <b>Parágrafo 1: </b> En los programas a distancia o en materias
               cursadas de manera modular o intensiva, el plazo de cancelación de
               matrícula vence una vez cumplido el 75% del tiempo estipulado en
               el cronograma descrito en el plan de curso para la respectiva
@@ -154,14 +154,14 @@ export const MatterCancellation = () => {
         <div>
           <label htmlFor="subjectToCancel">
             Firma del estudiante{' '}
-            <small>Sólo archivos de imágen: png o jpg</small>
+            <small>Sólo archivos de imágen: png, jpg o jpeg</small>
           </label>
           <input
             type="file"
             id="subjectToCancel"
             accept="image/png, image/jpg, image/jpeg"
             onChange={(e) => setStudentSignature(e.target.files[0])}
-            placeholder="Sólo imágenes png o jpg"
+            placeholder="Sólo imágenes png, jpg o jpeg"
           />
         </div>
         <Button
@@ -183,6 +183,7 @@ export const MatterCancellation = () => {
 }
 
 const Form = styled.form`
+  width: 95%;
   /* display: flex; */
   display: grid;
   grid-template-columns: 50% 50%;
@@ -197,6 +198,10 @@ const Form = styled.form`
     font-family: 'Poppins', sans-serif;
     font-size: 15px;
     font-weight: 500;
+
+    display: flex;
+    gap: 5px;
+    align-items: center;
   }
 
   input {
@@ -208,6 +213,21 @@ const Form = styled.form`
     height: 40px;
     border-radius: 10px;
     padding-left: 15px;
+    background-color: -internal-light-dark(
+      rgb(232, 240, 254),
+      rgba(70, 90, 126, 0.4)
+    ) !important;
+  }
+
+  /* input[type="file" i] { */
+  input[type='file'] {
+    padding: 10px 1px 15px 15px;
+    cursor: pointer;
+    height: 15px;
+  }
+
+  input[type='submit'] {
+    width: 50%;
   }
 
   small {

@@ -136,13 +136,13 @@ export const Container = styled.div`
         color: #ee6b4e;
       }
 
-      :after {
+      /* :after {
         content: "\\002B";
         color: #777;
         font-weight: bold;
         float: right;
         margin-left: 5px;
-      }
+      } */
 
       :before {
         /* content: "▶"; */
