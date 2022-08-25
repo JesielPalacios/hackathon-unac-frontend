@@ -9,7 +9,7 @@ import { Loading } from '../../shared/Loading/Loading'
 import { Container, Subtitle, Title } from '../AcademicProcesses'
 // import AcademicProcessesDetail from '../AcademicProcessesDetail/AcademicProcessesDetail'
 
-const MyAcademicProcesses = ({ academicProcesses, loading, error }) => {
+const MyAcademicProcesses = (props, { academicProcesses, loading, error }) => {
   // const putContent = () => {
   //   // if (academicProcesses.length > 0 && academicProcesses[0] != null) {
   //   //   return <AcademicProcessesDetail academicProcesses={academicProcesses} />
@@ -41,6 +41,10 @@ const MyAcademicProcesses = ({ academicProcesses, loading, error }) => {
     //   getMatterCancellation()
     // }, [])
     // -------------------------------------
+    useEffect(() => {
+      // fetchAllMatterCancellations()
+      console.log(props)
+    }, [])
 
   return (
     <Container>
