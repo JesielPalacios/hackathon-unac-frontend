@@ -222,63 +222,89 @@ export const Subtitle = styled.h2`
 
 export const processes = [
   {
-    title: "Formulario para solicitar cancelación de materias.",
+    value: 'Formulario para solicitar cancelación de materias.',
+    label: 'Formulario para solicitar cancelación de materias.',
+    title: 'Formulario para solicitar cancelación de materias.',
     description: `Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatibus quibusdam tempore, eius voluptas blanditiis, aperiam doloremque voluptate, saepe delectus aliquam reiciendis hic? Dolor, reiciendis labore rerum non asperiores vitae fugiat?`,
   },
   {
-    title: "Formulario para solicitar habilitación de materias.",
+    value: 'Formulario para solicitar habilitación de materias.',
+    label: 'Formulario para solicitar habilitación de materias.',
+    title: 'Formulario para solicitar habilitación de materias.',
     description:
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatibus quibusdam tempore, eius voluptas blanditiis, aperiam doloremque voluptate, saepe delectus aliquam reiciendis hic? Dolor, reiciendis labore rerum non asperiores vitae fugiat?",
+      'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatibus quibusdam tempore, eius voluptas blanditiis, aperiam doloremque voluptate, saepe delectus aliquam reiciendis hic? Dolor, reiciendis labore rerum non asperiores vitae fugiat?',
   },
   {
+    value:
+      'Formulario para solicitar homologación de materias, suficiencia de materias y materias dirigidas.',
+    label:
+      'Formulario para solicitar homologación de materias, suficiencia de materias y materias dirigidas.',
     title:
-      "Formulario para solicitar homologación de materias, suficiencia de materias y materias dirigidas.",
+      'Formulario para solicitar homologación de materias, suficiencia de materias y materias dirigidas.',
     description:
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatibus quibusdam tempore, eius voluptas blanditiis, aperiam doloremque voluptate, saepe delectus aliquam reiciendis hic? Dolor, reiciendis labore rerum non asperiores vitae fugiat?",
+      'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatibus quibusdam tempore, eius voluptas blanditiis, aperiam doloremque voluptate, saepe delectus aliquam reiciendis hic? Dolor, reiciendis labore rerum non asperiores vitae fugiat?',
   },
   {
-    title: "Formulario para estudiante de reingreso.",
+    value: 'Formulario para estudiante de reingreso.',
+    label: 'Formulario para estudiante de reingreso.',
+    title: 'Formulario para estudiante de reingreso.',
     description:
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatibus quibusdam tempore, eius voluptas blanditiis, aperiam doloremque voluptate, saepe delectus aliquam reiciendis hic? Dolor, reiciendis labore rerum non asperiores vitae fugiat?",
+      'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatibus quibusdam tempore, eius voluptas blanditiis, aperiam doloremque voluptate, saepe delectus aliquam reiciendis hic? Dolor, reiciendis labore rerum non asperiores vitae fugiat?',
   },
   {
-    title: "Formulario para solicitar supletorio.",
+    value: 'Formulario para solicitar supletorio.',
+    label: 'Formulario para solicitar supletorio.',
+    title: 'Formulario para solicitar supletorio.',
     description:
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatibus quibusdam tempore, eius voluptas blanditiis, aperiam doloremque voluptate, saepe delectus aliquam reiciendis hic? Dolor, reiciendis labore rerum non asperiores vitae fugiat?",
+      'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatibus quibusdam tempore, eius voluptas blanditiis, aperiam doloremque voluptate, saepe delectus aliquam reiciendis hic? Dolor, reiciendis labore rerum non asperiores vitae fugiat?',
   },
   {
-    title: "Formulario para solicitar cancelación de matrícula.",
+    value: 'Formulario para solicitar cancelación de matrícula.',
+    label: 'Formulario para solicitar cancelación de matrícula.',
+    title: 'Formulario para solicitar cancelación de matrícula.',
     description:
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatibus quibusdam tempore, eius voluptas blanditiis, aperiam doloremque voluptate, saepe delectus aliquam reiciendis hic? Dolor, reiciendis labore rerum non asperiores vitae fugiat?",
+      'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatibus quibusdam tempore, eius voluptas blanditiis, aperiam doloremque voluptate, saepe delectus aliquam reiciendis hic? Dolor, reiciendis labore rerum non asperiores vitae fugiat?',
   },
   {
-    title: "Formulario para solicitud de grado.",
+    value: 'Formulario para solicitud de grado.',
+    label: 'Formulario para solicitud de grado.',
+    title: 'Formulario para solicitud de grado.',
     description:
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatibus quibusdam tempore, eius voluptas blanditiis, aperiam doloremque voluptate, saepe delectus aliquam reiciendis hic? Dolor, reiciendis labore rerum non asperiores vitae fugiat?",
+      'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatibus quibusdam tempore, eius voluptas blanditiis, aperiam doloremque voluptate, saepe delectus aliquam reiciendis hic? Dolor, reiciendis labore rerum non asperiores vitae fugiat?',
   },
   {
-    title: "Formulario de consentimiento informado para estudiantes.",
+    value: 'Formulario de consentimiento informado para estudiantes.',
+    label: 'Formulario de consentimiento informado para estudiantes.',
+    title: 'Formulario de consentimiento informado para estudiantes.',
     description:
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatibus quibusdam tempore, eius voluptas blanditiis, aperiam doloremque voluptate, saepe delectus aliquam reiciendis hic? Dolor, reiciendis labore rerum non asperiores vitae fugiat?",
+      'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatibus quibusdam tempore, eius voluptas blanditiis, aperiam doloremque voluptate, saepe delectus aliquam reiciendis hic? Dolor, reiciendis labore rerum non asperiores vitae fugiat?',
   },
   {
-    title: "Formulario de solicitud para modificación en las calificaciones.",
+    value: 'Formulario de solicitud para modificación en las calificaciones.',
+    label: 'Formulario de solicitud para modificación en las calificaciones.',
+    title: 'Formulario de solicitud para modificación en las calificaciones.',
     description:
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatibus quibusdam tempore, eius voluptas blanditiis, aperiam doloremque voluptate, saepe delectus aliquam reiciendis hic? Dolor, reiciendis labore rerum non asperiores vitae fugiat?",
+      'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatibus quibusdam tempore, eius voluptas blanditiis, aperiam doloremque voluptate, saepe delectus aliquam reiciendis hic? Dolor, reiciendis labore rerum non asperiores vitae fugiat?',
   },
   {
-    title: "Autorización de matrícula por coordinador del programa.",
+    value: 'Autorización de matrícula por coordinador del programa.',
+    label: 'Autorización de matrícula por coordinador del programa.',
+    title: 'Autorización de matrícula por coordinador del programa.',
     description:
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatibus quibusdam tempore, eius voluptas blanditiis, aperiam doloremque voluptate, saepe delectus aliquam reiciendis hic? Dolor, reiciendis labore rerum non asperiores vitae fugiat?",
+      'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatibus quibusdam tempore, eius voluptas blanditiis, aperiam doloremque voluptate, saepe delectus aliquam reiciendis hic? Dolor, reiciendis labore rerum non asperiores vitae fugiat?',
   },
   {
-    title: "Formulario para solicitar inscripción de materia intensiva.",
+    value: 'Formulario para solicitar inscripción de materia intensiva.',
+    label: 'Formulario para solicitar inscripción de materia intensiva.',
+    title: 'Formulario para solicitar inscripción de materia intensiva.',
     description:
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatibus quibusdam tempore, eius voluptas blanditiis, aperiam doloremque voluptate, saepe delectus aliquam reiciendis hic? Dolor, reiciendis labore rerum non asperiores vitae fugiat?",
+      'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatibus quibusdam tempore, eius voluptas blanditiis, aperiam doloremque voluptate, saepe delectus aliquam reiciendis hic? Dolor, reiciendis labore rerum non asperiores vitae fugiat?',
   },
   {
-    title: "Formulario para matricular materias con otro programa.",
+    value: 'Formulario para matricular materias con otro programa.',
+    label: 'Formulario para matricular materias con otro programa.',
+    title: 'Formulario para matricular materias con otro programa.',
     description:
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatibus quibusdam tempore, eius voluptas blanditiis, aperiam doloremque voluptate, saepe delectus aliquam reiciendis hic? Dolor, reiciendis labore rerum non asperiores vitae fugiat?",
+      'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatibus quibusdam tempore, eius voluptas blanditiis, aperiam doloremque voluptate, saepe delectus aliquam reiciendis hic? Dolor, reiciendis labore rerum non asperiores vitae fugiat?',
   },
-];
+]

@@ -7,6 +7,7 @@ import { Seo } from '../../layout/Seo'
 import { ErrorAndWarning } from '../../shared/ErrorAndWarning/ErrorAndWarning'
 import { Loading } from '../../shared/Loading/Loading'
 import { Container, processes, Subtitle, Title } from '../AcademicProcesses'
+import { customStyles, SelectForm } from './MyAcademicProcesses.styles'
 // import AcademicProcessesDetail from '../AcademicProcessesDetail/AcademicProcessesDetail'
 
 // const MyAcademicProcesses = (props, { academicProcesses, loading, error }) => {
@@ -14,7 +15,9 @@ const MyAcademicProcesses = (
   props,
   { matterCancellations, loading, error }
 ) => {
-  const [academicProcessName, setAcademicProcessName] = useState('')
+  const [academicProcessName, setAcademicProcessName] = useState(
+    'Ninguna opción seleccionada'
+  )
   let academicProcesses = matterCancellations
 
   const putContent = () => {
@@ -83,21 +86,22 @@ const MyAcademicProcesses = (
           universitaria adventista UNAC. <b>enviar formulario</b>.
         </Subtitle>
 
-        <p>
-          <label htmlFor="academicProcessesSelect">
-            <h3>Seleccione el tipo de proceso académico:</h3>
-          </label>
-          <select
-            id="academicProcessesSelect"
-            onChange={(e) => setAcademicProcessName(e.target.value)}
-          >
-            {processes.map((process) => (
-              <option value={process.title}>{process.title}</option>
-            ))}
-          </select>
+        <label htmlFor="academicProcessesSelect">
+          <h3>Seleccione la opción del tipo de proceso académico:</h3>
+        </label>
 
-          <h2>{academicProcessName}</h2>
-        </p>
+        <SelectForm
+          id="academicProcessesSelect"
+          options={processes}
+          defaultValue={processes[0].title}
+          onChange={({ value }) => setAcademicProcessName(value)}
+          // isClearable={true}
+          placeholder="Escriba para buscar"
+          styles={customStyles}
+          noOptionsMessage={({inputValue}) => <b>No existe dicho proceso académico</b>}
+        />
+
+        <h4>{academicProcessName}</h4>
       </Container>
     </>
   )
