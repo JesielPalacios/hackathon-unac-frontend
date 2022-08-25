@@ -43,7 +43,7 @@ const MyAcademicProcesses = (props, { academicProcesses, loading, error }) => {
     // -------------------------------------
     useEffect(() => {
       // fetchAllMatterCancellations()
-      console.log(props)
+      // console.log(props)
     }, [])
 
   return (

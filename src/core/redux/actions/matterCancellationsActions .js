@@ -1,19 +1,28 @@
+import axios from 'axios'
 import { useMatterCancellation } from '../../hooks/useMatterCancellation'
 import { actionType } from '../store/types/matterCancellationsTypes'
 
 export const fetchAllMatterCancellations = () => async (dispatch) => {
-  const { getMatterCancellation } = useMatterCancellation()
+  const { token } = useMatterCancellation()
 
   dispatch({
     type: actionType.LOADING,
   })
 
-  getMatterCancellation()
+  await axios
+    .get('http://localhost:3001/api/matter-cancellations', {
+      headers: {
+        Authorization: token,
+      },
+    })
     .then((res) => {
-      dispatch({
-        type: actionType.GET_ALL_MATTER_CANCELLATIONS,
-        payload: res.data,
-      })
+      console.log(res)
+      if (res) {
+        dispatch({
+          type: actionType.GET_ALL_MATTER_CANCELLATIONS,
+          payload: res?.data,
+        })
+      }
     })
     .catch((res) => {
       dispatch({
@@ -21,6 +30,6 @@ export const fetchAllMatterCancellations = () => async (dispatch) => {
         payload: true,
       })
 
-      console.log(res.message)
+      // console.log(res.message)
     })
 }

@@ -42,5 +42,6 @@ export const useMatterCancellation = () => {
     error: state.error,
     createMatterCancellation,
     getMatterCancellation,
+    token: isAuth
   }
 }
