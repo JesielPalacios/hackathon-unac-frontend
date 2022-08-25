@@ -1,10 +1,6 @@
 import React, { useCallback, useContext, useState } from 'react'
 import { Context } from '../context/UserContext'
-import {
-  createMatterCancellationService,
-  getMatterCancellationsService,
-} from '../../services/matterCancellation.service'
-import { actionType } from '../redux/store/types/matterCancellationsTypes'
+import { createMatterCancellationService } from '../../services/matterCancellation.service'
 
 export const useMatterCancellation = () => {
   const { isAuth } = useContext(Context)
@@ -33,15 +29,9 @@ export const useMatterCancellation = () => {
     []
   )
 
-  const getMatterCancellation = useCallback(() => {
-    return getMatterCancellationsService({ token: isAuth })
-  }, [])
-
   return {
     loading: state.loading,
     error: state.error,
     createMatterCancellation,
-    getMatterCancellation,
-    token: isAuth
   }
 }

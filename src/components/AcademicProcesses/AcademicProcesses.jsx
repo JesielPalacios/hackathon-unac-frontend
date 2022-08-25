@@ -220,7 +220,7 @@ export const Subtitle = styled.h2`
   margin-bottom: 35px;
 `;
 
-const processes = [
+export const processes = [
   {
     title: "Formulario para solicitar cancelación de materias.",
     description: `Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatibus quibusdam tempore, eius voluptas blanditiis, aperiam doloremque voluptate, saepe delectus aliquam reiciendis hic? Dolor, reiciendis labore rerum non asperiores vitae fugiat?`,

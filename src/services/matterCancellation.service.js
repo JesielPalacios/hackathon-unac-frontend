@@ -26,7 +26,7 @@ export async function createMatterCancellationService({
     })
 }
 
-export async function getMatterCancellationsService({ token }) {
+export async function getMatterCancellationsService(token) {
   return await axios.get('http://localhost:3001/api/matter-cancellations', {
     headers: {
       Authorization: token,
