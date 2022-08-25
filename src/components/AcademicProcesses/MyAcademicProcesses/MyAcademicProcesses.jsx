@@ -9,19 +9,23 @@ import { Loading } from '../../shared/Loading/Loading'
 import { Container, Subtitle, Title } from '../AcademicProcesses'
 // import AcademicProcessesDetail from '../AcademicProcessesDetail/AcademicProcessesDetail'
 
-const MyAcademicProcesses = (props, { academicProcesses, loading, error }) => {
+// const MyAcademicProcesses = (props, { academicProcesses, loading, error }) => {
+const MyAcademicProcesses = (
+  props,
+  { matterCancellations, loading, error }
+) => {
   // const putContent = () => {
   //   // if (academicProcesses.length > 0 && academicProcesses[0] != null) {
   //   //   return <AcademicProcessesDetail academicProcesses={academicProcesses} />
   //   // }
   //   // if (
-    //   //   academicProcesses.length === 0 &&
-    //   //   academicProcesses[0] == null &&
-    //   //   !error &&
-    //   //   !loading
-    //   // ) {
-      //     return (
-        //       <Error warning={true}>
+  //   //   academicProcesses.length === 0 &&
+  //   //   academicProcesses[0] == null &&
+  //   //   !error &&
+  //   //   !loading
+  //   // ) {
+  //     return (
+  //       <Error warning={true}>
   //         {/* En estos momentos no hay ninguna cancelación de materias en estado de
   //         espera o por revisión. */}
   //         En estos momentos no hay ningun proceso académico para el usuario, si
@@ -37,37 +41,48 @@ const MyAcademicProcesses = (props, { academicProcesses, loading, error }) => {
   // }
   // -------------------------------------
   // const { getMatterCancellation } = useMatterCancellation()
-    // useEffect(() => {
-    //   getMatterCancellation()
-    // }, [])
-    // -------------------------------------
-    useEffect(() => {
-      // fetchAllMatterCancellations()
-      // console.log(props)
-    }, [])
+  // useEffect(() => {
+  //   getMatterCancellation()
+  // }, [])
+  // -------------------------------------
+  useEffect(() => {
+    // fetchAllMatterCancellations()
+    // console.log(props)
+    // console.log(props.matterCancellations)
+  }, [])
 
   return (
-    <Container>
-      <Seo
-        title="Mis procesos académicos"
-        subtitle="Todos mis procesos académicos activos"
-      />
-      <Title>Mis procesos académicos</Title>
-      <Subtitle>
-        A continuación una lista de todos sus procesos académicos activos, donde
-        podrá ver el estado actual, requisitos y/o información suministrada por
-        el centro de admisiones de la corporación universitaria adventista UNAC.{' '}
-        <b>enviar formulario</b>.
-      </Subtitle>
-      {/* {loading && <Loading />}
+    <>
+      {loading && <Loading />}
+
       {error && (
         <ErrorAndWarning>
           Lastimosamente algo salió mal en la petición al servidor.
         </ErrorAndWarning>
-      )} */}
-      {/* {putContent()} */}
-      'Hi'
-    </Container>
+      )}
+
+      <Container>
+        <Seo
+          title="Mis procesos académicos"
+          subtitle="Todos mis procesos académicos activos"
+        />
+        <Title>Mis procesos académicos</Title>
+        <Subtitle>
+          A continuación una lista de todos sus procesos académicos activos,
+          donde podrá ver el estado actual, requisitos y/o información
+          suministrada por el centro de admisiones de la corporación
+          universitaria adventista UNAC. <b>enviar formulario</b>.
+        </Subtitle>
+        <ul>
+          {props.matterCancellations.map((matterCancellation) => {
+            return <li>{matterCancellation.subjectToCancel}</li>
+          })}
+        </ul>
+        {/*  */}
+        {/* {putContent()} */}
+        'Hi'
+      </Container>
+    </>
   )
 }
 

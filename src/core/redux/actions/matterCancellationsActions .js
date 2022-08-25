@@ -1,9 +1,10 @@
 import axios from 'axios'
-import { useMatterCancellation } from '../../hooks/useMatterCancellation'
+import { useContext } from 'react'
+import { Context } from '../../context/UserContext'
 import { actionType } from '../store/types/matterCancellationsTypes'
 
 export const fetchAllMatterCancellations = () => async (dispatch) => {
-  const { token } = useMatterCancellation()
+  const { isAuth } = useContext(Context)
 
   dispatch({
     type: actionType.LOADING,
@@ -12,24 +13,24 @@ export const fetchAllMatterCancellations = () => async (dispatch) => {
   await axios
     .get('http://localhost:3001/api/matter-cancellations', {
       headers: {
-        Authorization: token,
+        Authorization: isAuth,
       },
     })
     .then((res) => {
-      console.log(res)
+      // console.log(res)
       if (res) {
         dispatch({
           type: actionType.GET_ALL_MATTER_CANCELLATIONS,
-          payload: res?.data,
+          payload: res.data,
         })
       }
     })
-    .catch((res) => {
+    .catch(() => {
       dispatch({
         type: actionType.ERROR,
         payload: true,
       })
 
-      // console.log(res.message)
+      console.log(res.message)
     })
 }
