@@ -1,8 +1,11 @@
-import styles from "./Header.module.css";
-import imgLogo from "./../../assets/Home/Logo.png";
-import { Link } from "react-router-dom";
+import styles from './Header.module.css'
+import imgLogo from './../../assets/Home/Logo.png'
+import { Link } from 'react-router-dom'
+import { useUser } from '../../core/hooks/useUser'
 
 export const Header = () => {
+  const { logout, isAuth } = useUser()
+
   return (
     <header className={styles.home_header}>
       <div className={styles.home_wrapper_logo}>
@@ -21,8 +24,8 @@ export const Header = () => {
             </Link>
           </li>
           <li className={styles.home_item_link}>
-            <Link to="/revisiones" className={styles.home_link}>
-              Revisiones de pago
+            <Link to="/mis-procesos-academicos" className={styles.home_link}>
+              Mis procesos académicos
             </Link>
           </li>
           <li className={styles.home_item_link}>
@@ -31,12 +34,22 @@ export const Header = () => {
             </Link>
           </li>
           <li className={styles.home_item_link}>
-            <Link to="/login" className={styles.home_link_admin}>
-              <span className={styles.link_admin_span}>Login admin</span>
-            </Link>
+            {isAuth ? (
+              <Link
+                to="/login"
+                className={styles.home_link_admin}
+                onClick={logout}
+              >
+                <span className={styles.link_admin_span}>Cerrar sesión</span>
+              </Link>
+            ) : (
+              <Link to="/login" className={styles.home_link_admin}>
+                <span className={styles.link_admin_span}>Iniciar sesión</span>
+              </Link>
+            )}
           </li>
         </ul>
       </div>
     </header>
-  );
-};
+  )
+}

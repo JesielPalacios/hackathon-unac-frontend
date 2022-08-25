@@ -21,7 +21,7 @@ const AcademicProcesses = () => {
       <details>
         <summary>1. Formulario para solicitar cancelación de materias</summary>
         <main>
-          <p>
+          {/* <p> */}
             <h2>
               Artículo 42. TÉRMINO PARA CANCELAR LA MATRÍCULA O MATERIAS Y SUS
               CONSECUENCIAS.
@@ -71,7 +71,7 @@ const AcademicProcesses = () => {
             <LinkRouter to="cancelar-materia">
               Solicitar cancelación de materia
             </LinkRouter>
-          </p>
+          {/* </p> */}
         </main>
       </details>
 

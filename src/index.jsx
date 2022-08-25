@@ -1,14 +1,20 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import reportWebVitals from './reportWebVitals'
-import './index.css'
+
 import { App } from './App'
 import Context from './core/context/UserContext'
+
+import { Provider } from 'react-redux'
+import { store } from './core/redux/store'
+import './index.css'
 
 ReactDOM.render(
   <React.StrictMode>
     <Context.Provider>
-      <App />
+      <Provider store={store}>
+        <App />
+      </Provider>
     </Context.Provider>
   </React.StrictMode>,
   document.getElementById('myHtmlTag')

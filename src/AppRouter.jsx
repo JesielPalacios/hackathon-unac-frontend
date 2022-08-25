@@ -6,7 +6,7 @@ import { useUser } from './core/hooks/useUser'
 
 const Home = React.lazy(() => import('./components/Home/Home'))
 const AcademicProcesses = React.lazy(() => import('./components/AcademicProcesses/AcademicProcesses'))
-const Reviews = React.lazy(() => import('./components/Reviews/Reviews'))
+const MyAcademicProcesses = React.lazy(() => import('./components/AcademicProcesses/MyAcademicProcesses/MyAcademicProcesses'))
 const About = React.lazy(() => import('./components/About/About'))
 const LogIn = React.lazy(() => import('./components/Login/Login'))
 
@@ -26,7 +26,7 @@ export const AppRouter = () => {
             <Route path="/entrevista">{isAuth ? <Dashboard2 /> : <LogIn />}</Route>        
             */}
             <Route path="/procesos-academicos" component={AcademicProcesses} />
-            <Route path="/revisiones" component={isAuth ? Reviews : LogIn} />
+            <Route path="/mis-procesos-academicos" component={isAuth ? MyAcademicProcesses : LogIn} />
             <Route path="/nosotros" component={About} />
             <Route path="/cancelar-materia" component={isAuth ? MatterCancellation : LogIn} />
             <Route path="/login">{isAuth ? <Home /> : <LogIn />}</Route>

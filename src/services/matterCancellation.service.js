@@ -38,3 +38,17 @@ export async function createMatterCancellationService({
       return res.json()
     })
 }
+
+export async function getMatterCancellationsService({ token }) {
+  return await axios
+    .get('http://localhost:3001/api/matter-cancellations', {
+      headers: {
+        Authorization: token,
+      },
+    })
+    .then((resp) => {
+      // console.log(resp)
+      // if (resp.statusText != 'OK') throw new Error('La respuesta es NO ok')
+      return resp
+    })
+}
