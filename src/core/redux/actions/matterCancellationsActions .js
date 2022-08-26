@@ -13,6 +13,7 @@ export const fetchAllMatterCancellations = () => async (dispatch) => {
 
   getMatterCancellationsService(isAuth)
     .then((res) => {
+      // console.log(res)
       dispatch({
         type: actionType.GET_ALL_MATTER_CANCELLATIONS,
         payload: res.data,
